@@ -1,0 +1,40 @@
+jobs:
+  build:
+    working_directory: ~/project
+    
+    steps:
+      - checkout
+
+      # Set up Python
+      - run:
+          name: Set up Python
+          command: |
+            python -m venv venv
+            . venv/bin/activate
+            pip install --upgrade pip
+            pip install pdm
+
+      # Install dependencies using PDM
+      - run:
+          name: Install dependencies
+          command: pdm install
+
+      # Run tests with pytest
+      - run:
+          name: Run tests
+          command: pdm run pytest
+      
+      # Run Flake8 for linting
+      - run:
+          name: Run Flake8
+          command: pdm run flake8
+
+      # Run Black for code formatting
+      - run:
+          name: Run Black
+          command: pdm run black --check .
+
+      # If needed, apply Black formatting
+      # - run:
+      #     name: Apply Black formatting
+      #     command: pdm run black .
