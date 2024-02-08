@@ -3,8 +3,10 @@ name = "Leafeon"
 version = "0.0.0"
 description = "A brief description of what your project does."
 authors = [{ name = "Your Name", email = "youremail@example.com" }]
-license = "MIT"
-requires-python = ">=3.8"  # Specify the Python version requirement here
+requires-python = ">=3.8"
+
+# Specify license via a LICENSE file
+license = { file = "LICENSE" }
 
 [project.dependencies]
 flask = "^1.1.2"
@@ -18,4 +20,4 @@ dev = [
 ]
 
 [tool.pdm]
-python_requires = ">=3.8"  # Ensure PDM is aware of the Python version requirement
+python_requires = ">=3.8"
