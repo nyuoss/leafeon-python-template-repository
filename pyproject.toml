@@ -1,15 +1,19 @@
 [build-system]
 requires = ["pdm-pep517"]
 build-backend = "pdm.pep517.api"
+
 [project]
 name = "Leafeon"
 version = "0.0.0"
 description = "A brief description of what your project does."
 authors = [{ name = "Your Name", email = "youremail@example.com" }]
-license = "MIT" 
+license = "MIT"
+requires-python = ">=3.8"  
+
 [project.dependencies]
 flask = "^1.1.2"
 requests = "^2.25.1"
+
 [project.optional-dependencies]
 dev = [
     "pytest>=6.0,<7",
@@ -17,3 +21,5 @@ dev = [
     "flake8>=3.8,<4"
 ]
 
+[tool.pdm]
+python_requires = ">=3.8" 
