@@ -28,7 +28,8 @@ python_requires = ">=3.8"
 test = [
     "pytest>=6.0,<7",
     "black==21.12b0",
-    "flake8>=3.8,<4"
+    "flake8>=3.8,<4",
+    "click==8.0.4"  # to solve the dependency issue with black
 ]
 
 [tool.pytest.ini_options]
