@@ -11,6 +11,7 @@ jobs:
       - run:
           name: Install PDM and project dependencies
           command: |
+          
             python -m pip install --upgrade pip
             pip install pdm
             pdm config python.use_venv true
@@ -32,7 +33,11 @@ jobs:
           name: Lint with Flake8
           command: pdm run flake8 source
 
+      - run:
+          name: Apply Black formatting
+          command: pdm run black
+
       # Check code formatting with Black
       - run:
           name: Check formatting with Black
-          command: pdm run black --check .
+          command: pdm run black --check
