@@ -35,9 +35,9 @@ jobs:
 
       - run:
           name: Apply Black formatting
-          command: pdm run black
+          command: pdm run black .
 
       # Check code formatting with Black
       - run:
           name: Check formatting with Black
-          command: pdm run black --check
+          command: pdm run black --check .
