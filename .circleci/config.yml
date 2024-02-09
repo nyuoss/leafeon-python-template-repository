@@ -21,6 +21,12 @@ jobs:
           name: Run tests
           command: pdm run pytest source/tests
 
+      - run:
+          name: Install specific versions of Black and Click
+          command: |
+            pdm add black --dev
+            pdm add click --dev
+
       # Run Flake8 for linting
       - run:
           name: Lint with Flake8
