@@ -14,12 +14,12 @@ jobs:
             python -m pip install --upgrade pip
             pip install pdm
             pdm config python.use_venv true
-            pdm install
+            pdm install -d
 
       # Run tests with pytest
       - run:
           name: Run tests
-          command: pdm run pytest
+          command: pdm run pytest source/tests
 
       # Run Flake8 for linting
       - run:
