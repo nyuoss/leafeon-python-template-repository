@@ -41,9 +41,9 @@ If you would like to contribute to this project, please follow these steps:
 4. Install dependencies: `pdm install`.
 5. Create a new branch for your feature/fix: `git checkout -b feature-name`.
 6. Make your changes and ensure they pass all tests and checks
-   - run `pytest source/tests` for testing
-   - run `flake8 source` for linting
-   - run `black .` for code formatting
+   - run `pdm run pytest source/tests` for testing
+   - run `pdm run flake8 source` for linting
+   - run `pdm run black .` for code formatting
 7. Commit your changes: `git commit -m 'Add new feature'`.
 8. Push to the branch: `git push origin feature-name`.
 9. Submit a pull request.
