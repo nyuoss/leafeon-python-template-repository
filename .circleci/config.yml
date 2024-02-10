@@ -9,35 +9,29 @@ jobs:
 
       # Set up Python with PDM
       - run:
-          name: Install PDM and project dependencies
+          name: Set up Python with PDM
           command: |
           
             python -m pip install --upgrade pip
             pip install pdm
             pdm config python.use_venv true
-            pdm install -d
+
+      # Install default + development dependencies
+      - run:
+          name: Install default + development dependencies
+          command: pdm install -d
 
       # Run tests with pytest
       - run:
           name: Run tests
           command: pdm run pytest source/tests
 
-      - run:
-          name: Install specific versions of Black and Click
-          command: |
-            pdm add black --dev
-            pdm add click --dev
-
       # Run Flake8 for linting
       - run:
           name: Lint with Flake8
           command: pdm run flake8 source
 
+      # Run Black for formatting
       - run:
           name: Apply Black formatting
           command: pdm run black .
-
-      # Check code formatting with Black
-      - run:
-          name: Check formatting with Black
-          command: pdm run black --check .

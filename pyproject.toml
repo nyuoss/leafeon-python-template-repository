@@ -1,5 +1,5 @@
 [project]
-name = "Leafeon"
+name = "Python Template"
 version = "0.0.0"
 description = "A brief description of what your project does."
 authors = [{ name = "Your Name", email = "youremail@example.com" }]
@@ -10,13 +10,6 @@ dependencies = [
     "requests>=2.25.1"
 ]
 
-[project.optional-dependencies]
-dev = [
-    "pytest>=6.0,<7",
-    "black==21.12b0",
-    "flake8>=3.8,<4"
-]
-
 [build-system]
 requires = ["pdm-pep517>=0.12.0"]
 build-backend = "pdm.pep517.api"
@@ -25,19 +18,12 @@ build-backend = "pdm.pep517.api"
 python_requires = ">=3.8"
 
 [tool.pdm.dev-dependencies]
-test = [
-    "pytest>=6.0,<7",
-    "black==21.12b0",
+lint = [
     "flake8>=3.8,<4",
+    "black==21.12b0",
     "click==8.0.4"  # to solve the dependency issue with black
 ]
-
-[tool.pytest.ini_options]
-minversion = "6.0"
-addopts = "-ra -q"
-testpaths = [
-    "source/tests"
-]
+test = ["pytest", "pytest-cov"]
 
 # Optional configurations for other tools like black, flake8 as per the reference file
 [tool.black]
