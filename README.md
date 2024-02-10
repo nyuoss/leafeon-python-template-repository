@@ -28,16 +28,22 @@ CircleCI will automatically set up python with PDM, install default and developm
     - `component.py`: Contains an example function `add`.
   - `tests/`: Contains test cases, including a test of component.py.
 
-## Contributing
+## Usage
+If you would like to use this template, click the "Use this Template" button in the top right corner.
+<img width="1314" alt="Screenshot 2024-02-10 at 5 33 41 PM" src="https://github.com/zhangdzh/py-template/assets/119933910/242837ec-7155-443f-b3a3-f510ffccd158">
 
-If you would like to contribute to this project or a project from this template, please follow these steps:
+## Contributing
+If you would like to contribute to this project, please follow these steps:
 
 1. Fork the repository.
 2. Clone the repository to your local machine.
 3. Install PDM: `pip install pdm`.
 4. Install dependencies: `pdm install`.
 5. Create a new branch for your feature/fix: `git checkout -b feature-name`.
-6. Make your changes and ensure they pass all tests and checks (pytest, flake8, black).
+6. Make your changes and ensure they pass all tests and checks
+   - run `pytest source/tests` for testing
+   - run `flake8 source` for linting
+   - run `black .` for code formatting
 7. Commit your changes: `git commit -m 'Add new feature'`.
 8. Push to the branch: `git push origin feature-name`.
 9. Submit a pull request.
