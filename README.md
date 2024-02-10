@@ -1,5 +1,6 @@
 # Python Project Template
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)  
+[![Leafeon](https://circleci.com/gh/Leafeon/py-template.svg?style=svg)](https://app.circleci.com/pipelines/circleci/42j8atdDzgh7tmZyp3BEAx/NKkbAnw1PXUdhc74vJtLL7)
 
 This is a template repository for Python projects. It includes a basic setup for managing dependencies, continuous integration, and directory structure commonly used in Python projects.
 
