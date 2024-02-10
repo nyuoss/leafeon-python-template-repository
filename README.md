@@ -12,9 +12,9 @@ This repository uses [Flake8](https://flake8.pycqa.org/en/latest/) linting as it
 [Black](https://black.readthedocs.io/en/stable/) is then used for code formatting.  
 To modify rules for tools like flake8 and black, check the configurations under `[tool.flake8]` and `[tool.black]` in the `pyproject.toml` file.
 
-## PyTest
-This repository uses [PyTest](https://docs.pytest.org/en/8.0.x/) for code testing.  
-PyTest is set to run on the `source/tests` directory in the "Run tests" run step of the `.circleci/config.yml` file.
+## Pytest
+This repository uses [Pytest](https://docs.pytest.org/en/8.0.x/) for code testing.  
+Pytest is set to run on the `source/tests` directory in the "Run tests" run step of the `.circleci/config.yml` file.
 
 ## CircleCI
 This repository uses [CircleCI](https://circleci.com/) for continuous integration.  
